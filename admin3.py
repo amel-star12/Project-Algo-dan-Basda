@@ -278,7 +278,7 @@ def user_management_menu():
 def view_products():
     print("\n--- 📦 DATA PRODUK ---")
     query = """
-    SELECT p.id_produk, p.nama_produk, p.stok, p.harga, k.nama_kategori, u.username as pemilik
+    SELECT p.id_produk, p.nama_produk, p.stok, p.harga, k.nama_kategori, p.diskon, u.username as pemilik
     FROM produk p
     JOIN kategori k ON p.id_kategori = k.id_kategori
     JOIN users u ON p.id_user = u.id_user
